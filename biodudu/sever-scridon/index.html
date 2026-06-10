@@ -4,139 +4,185 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Sever SCRIDON | PRODUCĂTOR LOCAL ECOLOGIC • BIODUDU • DUDESCO</title>
-
-<meta name="robots" content="noindex,nofollow">
+<title>Sever SCRIDON | BIODUDU • DUDESCO</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
 margin:0;
 padding:0;
-box-sizing:border-box
+box-sizing:border-box;
 }
 
 body{
 font-family:'Manrope',sans-serif;
 background:#eef2f5;
 color:#111;
-overflow-x:hidden
+overflow-x:hidden;
 }
+
+/* HERO */
 
 .hero{
-display:flex;
-align-items:stretch;
-min-height:100vh;
-background:#f6f3ef;
+background:#fff;
+padding-bottom:40px;
 }
 
-.hero-left{
-width:45%;
-padding:80px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:flex-end;
-text-align:right;
-}
-
-.hero-right{
-width:55%;
-}
+/* FOTO */
 
 .hero-photo{
 width:100%;
-height:100%;
+height:400px;
+overflow:hidden;
 object-fit:cover;
+object-position:center center;
 display:block;
 }
 
-.logo-dudesco{
-width:220px;
-height:auto;
-display:block;
+/* CONTINUT */
+
+.hero-content{
+max-width:850px;
+margin:0 auto;
+padding:0 30px;
+
+display:flex;
+flex-direction:column;
+align-items:flex-end;
+
+text-align:right;
 }
 
-.logo-biodudu{
-width:180px;
-height:auto;
-display:block;
-margin-top:20px;
-}
 
-.hero-left h3{
-font-size:26px;
+/* TEXT */
+
+.hero-content h3{
+font-size:28px;
 font-weight:300;
 color:#666;
 margin-bottom:10px;
 }
 
-.hero-left h1{
-font-size:76px;
-line-height:1;
+.hero-content h1{
+font-size:72px;
+line-height:.95;
 font-weight:700;
 color:#006838;
 margin-bottom:20px;
 }
 
-.separator{
-width:180px;
-height:2px;
-background:#006838;
-margin:25px 0;
-}
-
-.hero-left h2{
+.hero-content h2{
 font-size:34px;
 font-weight:300;
 line-height:1.4;
 color:#444;
 }
 
+/* BUTOANE */
+
 .btns{
 display:flex;
-gap:14px;
 justify-content:flex-end;
-margin-top:40px;
+gap:16px;
 flex-wrap:wrap;
+
+margin-top:40px;
 }
+
+.btn{
+background:#006838;
+color:#fff;
+text-decoration:none;
+
+padding:14px 24px;
+
+border-radius:14px;
+
+font-size:17px;
+font-weight:500;
+
+transition:.2s;
+
+box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* CARD */
+
+.card{
+max-width:900px;
+margin:60px auto;
+padding:0 30px;
+background:none;
+border-radius:0;
+box-shadow:none;
+}
+
+.row{
+display:flex;
+justify-content:flex-end;
+gap:30px;
+padding:12px 0;
+}
+
+.label{
+width:140px;
+text-align:right;
+color:#7c8492;
+font-size:15px;
+}
+
+.value{
+min-width:320px;
+text-align:left;
+font-size:22px;
+color:#111;
+}
+
+.value a{
+color:inherit;
+text-decoration:none;
+}
+
+.footer{
+text-align:center;
+padding:10px 0 20px;
+font-size:13px;
+color:#7c8492;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
 
-.hero{
-flex-direction:column-reverse;
-min-height:auto;
+.hero-photo{
+height:180px;
 }
 
-.hero-left,
-.hero-right{
-width:100%;
-}
-
-.hero-right{
-height:50vh;
-}
-
-.hero-left{
-padding:40px 25px;
+.hero-content{
 align-items:center;
 text-align:center;
+padding:0 20px;
 }
 
-.logos{
-align-items:center;
-}
 
-.hero-left h1{
+.hero-content h1{
 font-size:48px;
 }
 
-.hero-left h2{
+.hero-content h2{
+font-size:24px;
+}
+
+.hero-content h3{
 font-size:24px;
 }
 
@@ -144,129 +190,13 @@ font-size:24px;
 justify-content:center;
 }
 
-}
 .card{
-max-width:820px;
-margin:-18px auto 30px;
-background:#fff;
-border-radius:28px;
-padding:40px;
-box-shadow:0 20px 60px rgba(0,0,0,.10)
-}
-
-.row{
-padding:22px 0;
-border-bottom:1px solid #e8edf2
-}
-
-.label{
-font-size:13px;
-color:#7c8492;
-font-weight:500;
-letter-spacing:.2px
+margin:25px 14px;
+padding:24px;
 }
 
 .value{
-font-size:20px;
-margin-top:4px;
-font-weight:400;
-line-height:1.45;
-color:#16181d
-}
-
-.value a{
-color:inherit !important;
-text-decoration:none !important;
-transition:.2s;
-display:inline-block;
-}
-
-.value a:hover{
-opacity:.7
-}
-
-.value a:visited{
-color:inherit !important;
-text-decoration:none !important;
-}
-  
-.btns{
-display:flex;
-gap:18px;
-justify-content:center;
-margin-top:35px;
-flex-wrap:wrap
-}
-
-.btn{
-background:#006838;
-color:#fff;
-padding:14px 24px;
-border-radius:14px;
-text-decoration:none;
-font-size:17px;
-font-weight:500;
-letter-spacing:.1px;
-transition:.2s;
-box-shadow:0 8px 20px rgba(0,0,0,.10)
-}
-
-.btn:hover{
-transform:translateY(-2px)
-}
-
-.footer{
-text-align:center;
-padding:8px 0 20px;
-color:#7b8492;
-font-size:13px
-}
-
-.qr{
-margin:40px auto 0;
-width:220px;
-height:220px;
-background:#fff;
-border-radius:24px;
-padding:10px
-}
-
-.subtitle{
-font-size:.62em;
-opacity:.72;
-font-weight:400;
-display:block;
-margin-top:8px;
-letter-spacing:.2px;
-}  
-
-@media(max-width:700px){
-
-h1{
-font-size:36px
-}
-
-h2{
-font-size:20px
-}
-
-.subtitle{
-font-size:.58em;
-}
-  
-
-.value{
-font-size:19px
-}
-
-.card{
-margin:-28px 14px 20px;
-padding:24px
-}
-
-.btn{
-font-size:16px;
-padding:14px 22px
+font-size:18px;
 }
 
 }
@@ -274,71 +204,58 @@ padding:14px 22px
 </style>
 </head>
 
-<body oncontextmenu="return false;">
+<body>
 
 <div class="hero">
 
-    <div class="hero-left">
+<img src="Casa_01.png"
+     class="hero-photo"
+     alt="IMG">
 
-<div class="logos">
-    <img src="dudesco.svg" class="logo-dudesco">
-    <img src="biodudu.svg" class="logo-biodudu">
-</div>
+<div class="hero-content">
 
-        <h3>dr. ing.</h3>
 
-        <h1>Sever SCRIDON</h1>
 
-        <div class="separator"></div>
+<h3>dr. ing.</h3>
 
-        <h2>
-            Producător local
-            <br>
-            Agroturism • Produse ecologice
-        </h2>
+<h1>Sever SCRIDON</h1>
 
-    </div>
-
-    <div class="hero-right">
-
-        <img
-            src="Casa_01.png"
-            class="hero-photo"
-            alt="Dudesco">
-
-    </div>
-
-</div>
+<h2>
+Producător local ecologic
+<br>
+Agroturism • Produse Eco
+</h2>
 
 <div class="btns">
 
-    <a class="btn" href="tel:+40722574351">
-        Sună
-    </a>
+<a class="btn" href="tel:+40722574351">
+Sună
+</a>
 
-    <a class="btn" href="mailto:sever.s@gmx.net">
-        Email
-    </a>
+<a class="btn" href="mailto:sever.s@gmx.net">
+Email
+</a>
 
-    <a class="btn" href="sever-scridon_biodudu.vcf">
-        Adaugă contact
-    </a>
+<a class="btn" href="sever-scridon_biodudu.vcf">
+Adaugă contact
+</a>
 
-    <a class="btn"
-       href="https://maps.google.com/?q=46.043204,20.465014">
-        Locație
-    </a>
+<a class="btn"
+href="https://maps.google.com/?q=46.043204,20.465014">
+Locație
+</a>
 
 </div>
-    
+
+</div>
+
+</div>
 
 <div class="card">
 
 <div class="row">
 <div class="label">Companie</div>
-<div class="value">
-BIODUDU • DUDESCO
-</div>
+<div class="value">BIODUDU • DUDESCO</div>
 </div>
 
 <div class="row">
@@ -349,7 +266,6 @@ BIODUDU • DUDESCO
 </a>
 </div>
 </div>
-
 
 <div class="row">
 <div class="label">Email</div>
@@ -364,7 +280,7 @@ sever.s@gmx.net
 <div class="label">Email cazare</div>
 <div class="value">
 <a href="mailto:cazare@e-mercatore.ro">
-cazare@e-mercatore.ro 
+cazare@e-mercatore.ro
 </a>
 </div>
 </div>
@@ -372,7 +288,7 @@ cazare@e-mercatore.ro
 <div class="row">
 <div class="label">Site</div>
 <div class="value">
-<a href="https://www.e-mercatore.ro" target="_blank">
+<a href="https://www.e-mercatore.ro">
 www.e-mercatore.ro
 </a>
 </div>
@@ -381,10 +297,9 @@ www.e-mercatore.ro
 <div class="row">
 <div class="label">Adresă</div>
 <div class="value">
-<a target="_blank"
-href="https://maps.google.com/?q=46.043204,20.465014">
-Strada Șiștreg 17,<br>
-307150-Dudeștii Vechi,<br>
+<a href="https://maps.google.com/?q=46.043204,20.465014">
+Strada Șiștreg 17<br>
+307150 Dudeștii Vechi<br>
 Timiș, România
 </a>
 </div>
@@ -395,28 +310,6 @@ Timiș, România
 <div class="footer">
 bayo.design
 </div>
-<script>
 
-function shareContact(){
-
-if(navigator.share){
-
-navigator.share({
-title:'Sever SCRIDON',
-text:'PRODUCĂTOR LOCAL ECOLOGIC • BIODUDU • DUDESCO',
-url:window.location.href
-});
-
-}else{
-
-navigator.clipboard.writeText(window.location.href);
-
-alert('Link copiat');
-
-}
-
-}
-
-</script>
 </body>
 </html>
