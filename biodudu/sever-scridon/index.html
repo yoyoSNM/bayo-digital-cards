@@ -97,13 +97,19 @@ box-shadow:0 20px 60px rgba(0,0,0,.10)
 }
 
 .row{
-padding:22px 0;
+padding: 18px 0;
+margin-bottom:0;
 border-bottom:1px solid #e8edf2
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    align-items:start;
 }
 
 .label{
 font-size:13px;
 color:#104d65;
+text-align:right;
 font-weight:380;
 letter-spacing:.2px
 }
@@ -111,6 +117,7 @@ letter-spacing:.2px
 .value{
 font-size:20px;
 margin-top:4px;
+text-align:right;
 font-weight:400;
 line-height:1.45;
 color:#104d65
@@ -134,7 +141,7 @@ text-decoration:none !important;
   
 .btns{
 display:flex;
-gap:18px;
+gap:12px;
 justify-content:center;
 margin-top:35px;
 flex-wrap:wrap
@@ -144,7 +151,7 @@ flex-wrap:wrap
 background:#006838;
 color:#fff;
 padding:14px 24px;
-border-radius:14px;
+border-radius:12px;
 text-decoration:none;
 font-size:17px;
 font-weight:500;
