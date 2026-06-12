@@ -176,6 +176,25 @@ background:#104d65;
 transform:translateY(-2px)
 }
 
+
+.hero-photo{
+    display:block;
+    width:100%;
+    height:320px;
+    overflow:hidden;
+    margin-bottom:30px;
+    cursor:pointer;
+}
+
+.hero-photo img{
+    transition:.3s;
+}
+
+.hero-photo:hover img{
+    transform:scale(1.02);
+}
+
+
 .footer{
 text-align:center;
 padding:8px 0 20px;
@@ -219,7 +238,8 @@ font-size:14px
 .subtitle{
 font-size:0.76em;
 }
-  
+
+
 .hero-photo{
     height:120px;
 }
@@ -248,9 +268,9 @@ flex-direction:column;
 
 <div class="hero">
 
-    <div class="hero-photo">
-        <img src="Casa_01.png" alt="Casa BioDudu">
-    </div>
+<a href="Casa_01.png" target="_blank" class="hero-photo">
+    <img src="Casa_01.png" alt="Casa BioDudu">
+</a>
     
 
 <div class="title-group">
