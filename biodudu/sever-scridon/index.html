@@ -194,6 +194,22 @@ transform:translateY(-2px)
     transform:scale(1.02);
 }
 
+#lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+}
+
+#lightbox img{
+    max-width:95%;
+    max-height:95%;
+}
+
 
 .footer{
 text-align:center;
@@ -268,9 +284,13 @@ flex-direction:column;
 
 <div class="hero">
 
-<a href="Casa_01.png" target="_blank" class="hero-photo">
-    <img src="Casa_01.png" alt="Casa BioDudu">
-</a>
+<div class="hero-photo" onclick="openImage()">
+    <img src="Casa_01.jpg" alt="Casa BioDudu">
+</div>
+
+<div id="lightbox" onclick="closeImage()">
+    <img src="Casa_01.jpg" alt="">
+</div>
     
 
 <div class="title-group">
@@ -397,6 +417,15 @@ alert('Link copiat');
 
 }
 
+</script>
+<script>
+function openImage(){
+    document.getElementById('lightbox').style.display='flex';
+}
+
+function closeImage(){
+    document.getElementById('lightbox').style.display='none';
+}
 </script>
 </body>
 </html>
