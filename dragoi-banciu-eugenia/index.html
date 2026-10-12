@@ -10,222 +10,128 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f6f2eb;--ink:#292923;--muted:#777168;--line:#ded7cb;--blue:#477f9b;--blue-dark:#315f76;--white:#fffdf9}
+:root{--paper:#f6f2eb;--ink:#292923;--muted:#777168;--line:#ded7cb;--accent:#718ba0;--white:#fffdf9}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
 a{color:inherit}
-.topbar{min-height:54px;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
-.wordmark{font-size:10px;letter-spacing:1.6px;text-transform:uppercase}
-.top-note{color:var(--muted);font-size:9px;letter-spacing:1.3px;text-transform:uppercase}
-.hero{max-width:1400px;margin:0 auto;padding:22px 5% 0}
-.cover{width:100%;max-height:500px;overflow:hidden;background:#e8e0d4}
-.cover img{display:block;width:100%;max-height:500px;object-fit:contain}
-.intro{text-align:center;padding:22px 12px 34px}
-.eyebrow{color:var(--muted);font-size:9px;letter-spacing:2.5px;text-transform:uppercase}
+.hero{position:relative;max-width:1400px;margin:0 auto;padding:24px 5% 0}
+.brand-logo{position:absolute;top:18px;left:5%;width:62px;height:auto;display:block;z-index:2}
+.brand-logo img{display:block;width:100%;height:auto}
+.cover{display:block;width:100%;max-height:560px;overflow:hidden;background:#e8e0d4;cursor:pointer}
+.cover img{display:block;width:100%;max-height:560px;object-fit:contain}
+.intro{text-align:center;padding:24px 12px 22px}.eyebrow{margin:0 0 20px;color:var(--muted);font-size:12px;letter-spacing:4px;text-transform:uppercase}.intro-actions{padding:24px 12px 30px}
 h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:400}
-h1{margin:10px 0 0;font-size:clamp(31px,4.5vw,52px);line-height:1.1;letter-spacing:-.7px;color:var(--ink)}
-h1.artist-title{font-size:clamp(37px,5.4vw,66px);line-height:1.06;letter-spacing:-1.1px}
-.collection-subtitle{margin:12px 0 0;color:var(--blue-dark);font-size:11px;letter-spacing:2.3px;text-transform:uppercase}
-.cover-link{display:block;text-decoration:none;cursor:pointer}
-.cover-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
-.quick-contact{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:14px;color:var(--muted);font-size:11px}
-.quick-contact a{text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
-.quick-contact a:hover{color:var(--blue-dark);border-color:var(--blue)}
-.intro-line{width:36px;height:1px;margin:18px auto;background:var(--line)}
-.actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px}
-.button{display:inline-flex;justify-content:center;align-items:center;min-height:42px;padding:12px 16px;border:1px solid var(--blue);border-radius:2px;background:transparent;color:var(--blue-dark);font-size:9px;letter-spacing:1px;text-decoration:none;text-transform:uppercase;transition:background .2s ease}
-.button:hover{background:var(--white)}
-.button-primary{background:var(--blue);color:white}
-.button-primary:hover{background:var(--blue-dark);color:white}
-.contact{padding:48px 20px 44px;text-align:center;border-top:1px solid var(--line);scroll-margin-top:16px}
-.contact h2{margin:0 0 9px;font-size:34px}
-.contact-intro{margin:0 0 22px;color:var(--muted);font-size:12px}
-.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}
-.contact-links a{display:inline-block;padding:12px 15px;border:1px solid var(--line);font-size:11px;text-decoration:none}
-.contact-links a:hover{border-color:var(--blue);background:var(--white)}
-.footer{padding:18px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:10px;letter-spacing:2px}
-.gallery-view{display:none;min-height:80vh;padding:24px 5% 60px;background:var(--white)}
-.gallery-view.active{display:block}
-.main-view.hidden{display:none}
-.gallery-top{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1240px;margin:0 auto 28px}
-.back-link{display:inline-flex;align-items:center;gap:8px;padding:10px 0;color:var(--blue-dark);font-size:11px;text-decoration:none}
-.back-link .arrow{font-size:19px;line-height:1}
-.gallery-title{margin:0;text-align:right;font-family:"Playfair Display",Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px;max-width:1240px;margin:0 auto}
+h1{margin:0 0 12px;font-size:clamp(34px,5.2vw,66px);line-height:1.08;letter-spacing:-1.2px}
+.collection-title{margin:0;color:var(--accent);font-size:clamp(13px,1.5vw,16px);letter-spacing:2.2px;text-transform:uppercase}
+.primary-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin-top:25px}
+.button{position:relative;display:inline-flex;justify-content:center;align-items:center;min-width:180px;padding:15px 28px 17px;border:1px solid var(--ink);border-bottom:0;background:var(--ink);color:var(--white);font-size:12px;letter-spacing:1.2px;text-decoration:none;text-transform:uppercase;cursor:pointer;overflow:hidden}.button::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent)}
+.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+.quick-contact{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:18px;font-size:12px;color:var(--muted)}
+.quick-contact a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.gallery-view,.art-view{display:none}
+body.gallery-open .landing{display:none}
+body.gallery-open .gallery-view{display:block}
+body.art-open .landing,body.art-open .gallery-view{display:none}
+body.art-open .art-view{display:flex}
+.gallery-section{padding:58px 6% 76px;background:var(--white);min-height:100vh}
+.gallery-top{max-width:1240px;margin:0 auto 36px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.gallery-top h2{margin:0;font-size:clamp(28px,4vw,42px)}
+.back-link{border:1px solid var(--line);padding:12px 17px;text-decoration:none;font-size:12px;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px;max-width:1240px;margin:0 auto}
 .artwork{margin:0;min-width:0}
-.artwork button{display:block;width:100%;padding:0;border:0;background:var(--paper);cursor:pointer}
-.artwork img{display:block;width:100%;height:360px;object-fit:contain;transition:transform .3s ease}
-.artwork button:hover img{transform:scale(1.02)}
-.artwork figcaption{padding-top:10px;color:var(--muted);font-size:11px;letter-spacing:1.2px;text-align:center}
-.viewer{position:fixed;inset:0;z-index:20;display:none;flex-direction:column;align-items:stretch;background:var(--paper);padding:0}
-.viewer.active{display:flex}
-.viewer-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 5%;border-bottom:1px solid var(--line)}
-.viewer-back,.viewer-prev,.viewer-next{border:0;background:transparent;color:var(--blue-dark);font:inherit;cursor:pointer}
-.viewer-back{display:flex;align-items:center;gap:8px;font-size:11px}
-.viewer-number{color:var(--muted);font-size:11px;letter-spacing:1px}
-.viewer-content{display:flex;flex:1;align-items:center;justify-content:center;min-height:0;padding:20px 16px}
-.viewer-content img{display:block;max-width:100%;max-height:calc(100dvh - 145px);object-fit:contain}
-.viewer-footer{display:flex;justify-content:center;align-items:center;gap:36px;padding:15px;border-top:1px solid var(--line)}
-.viewer-prev,.viewer-next{font-size:12px;letter-spacing:.5px}
-.viewer-prev:disabled,.viewer-next:disabled{opacity:.25;cursor:default}
-@media(max-width:800px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:23px 14px}.artwork img{height:300px}.gallery-view{padding:20px 5% 45px}}
-@media(max-width:480px){
- .topbar{min-height:48px;padding:13px 5%;gap:8px}.wordmark{font-size:8.5px;letter-spacing:1px}.top-note{font-size:7.5px;letter-spacing:.8px}
- .hero{padding:13px 4% 0}.cover img{max-height:225px}.intro{padding:17px 3px 27px}
- .eyebrow{font-size:8px;letter-spacing:2px}h1{font-size:clamp(27px,7vw,34px);letter-spacing:-.5px}
- .collection-subtitle{font-size:9px;letter-spacing:1.5px}.intro-line{margin:15px auto}
- h1.artist-title{font-size:clamp(31px,8vw,40px);letter-spacing:-.7px}
- .quick-contact{margin-top:12px;font-size:10px}
- .actions{gap:7px}.button{min-height:40px;padding:11px 16px;font-size:8px;letter-spacing:.6px}
- .contact{padding:38px 18px 36px}.contact h2{font-size:31px}
- .contact-links{flex-direction:column;align-items:stretch;max-width:320px;margin:auto}
- .gallery-top{align-items:flex-start;margin-bottom:22px}.gallery-title{font-size:22px}
- .gallery-grid{gap:20px 10px}.artwork img{height:230px}.artwork figcaption{font-size:10px}
- .viewer-header{padding:13px 4%}.viewer-content{padding:12px 8px}.viewer-content img{max-height:calc(100dvh - 150px)}
- .viewer-footer{gap:24px;padding:13px}
-}
-@media(max-width:350px){.wordmark{font-size:7.5px}.top-note{font-size:7px}.button{padding:10px 9px;font-size:7.5px}}
+.artwork button{display:block;width:100%;padding:0;border:0;overflow:hidden;background:var(--paper);cursor:zoom-in}
+.artwork img{display:block;width:100%;height:360px;object-fit:contain;transition:transform .35s ease}
+.artwork button:hover img{transform:scale(1.025)}
+.artwork figcaption{padding-top:12px;color:var(--muted);font-size:11px;letter-spacing:1px}
+.art-view{position:fixed;inset:0;z-index:5;background:#181715;color:white;align-items:center;justify-content:center;padding:68px 22px 28px}
+.art-view img{display:block;max-width:100%;max-height:calc(100vh - 130px);object-fit:contain}
+.viewer-top{position:absolute;top:16px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.viewer-top button{padding:10px 14px;border:1px solid #6c6861;background:transparent;color:white;cursor:pointer;font:inherit;font-size:12px}
+.viewer-count{font-size:12px;color:#ddd6cc}
+.viewer-nav{position:absolute;top:50%;left:16px;right:16px;display:flex;justify-content:space-between;pointer-events:none}
+.viewer-nav button{pointer-events:auto;width:44px;height:44px;border:1px solid #777;background:rgba(24,23,21,.6);color:white;font-size:24px;cursor:pointer}
+.back-link:hover{border-color:var(--accent);background:var(--white)}
+.footer{padding:22px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:10px;letter-spacing:2px}
+@media(max-width:800px){.brand-logo{width:54px;top:14px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.artwork img{height:300px}.gallery-section{padding:38px 5% 60px}.gallery-top{align-items:flex-start}}
+@media(max-width:520px){.hero{padding:12px 4% 0}.brand-logo{top:10px;left:4%;width:46px}.intro{padding-top:42px}.cover img{max-height:300px}.intro{padding:23px 4px 30px}h1{letter-spacing:-.7px}.collection-title{font-size:11px;letter-spacing:1.6px}.primary-actions{gap:9px;margin-top:21px}.button{min-width:0;flex:1;padding:15px 12px;font-size:11px}.quick-contact{margin-top:16px}.gallery{gap:20px 10px}.artwork img{height:230px}.gallery-top{flex-direction:column}.back-link{align-self:flex-start}.viewer-nav{left:8px;right:8px}.viewer-nav button{width:38px;height:38px}}
 </style>
 </head>
 <body>
-<div id="main-view" class="main-view">
-  <header class="topbar">
-    <div class="wordmark">Drăgoi-Banciu Eugenia</div>
-    <div class="top-note">Artă contemporană</div>
-  </header>
-  <main>
-    <section class="hero" aria-labelledby="collection-title">
-      <a class="cover cover-link" href="#galerie" id="cover-gallery" aria-label="Deschide galeria de lucrări"><img src="revelatia-fericirii-15.jpg" alt="Deschide galeria Revelația fericirii"></a>
-      <div class="intro">
-        <div class="eyebrow">Artă contemporană</div>
-        <h1 id="collection-title" class="artist-title">Drăgoi-Banciu Eugenia</h1>
-        <p class="collection-subtitle">Revelația fericirii</p>
-        <div class="intro-line"></div>
-        <div class="actions">
-          <a class="button button-primary" href="#galerie" id="open-gallery">Vezi galeria</a>
-        </div>
-        <div class="quick-contact" aria-label="Contact rapid">
-          <a href="tel:+40745513453">Sună</a><span aria-hidden="true">·</span><a href="mailto:eugenial_30@yahoo.com">E-mail</a>
-        </div>
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <h2>Contact</h2>
-      <p class="contact-intro">Drăgoi-Banciu Eugenia</p>
-      <div class="contact-links">
-        <a href="tel:+40745513453">+40 745 513 453</a>
-        <a href="mailto:eugenial_30@yahoo.com">eugenial_30@yahoo.com</a>
-        <a href="contact.vcf" download>Salvează contactul</a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">BAYO DESIGN</footer>
+<main>
+<div class="landing">
+<section class="hero" aria-labelledby="artist-name">
+<a class="brand-logo" href="https://bayo.design" aria-label="BAYO Design"><img src="bayo-logo-transparent.png" alt="BAYO"></a>
+<div class="intro">
+<p class="eyebrow">Artă contemporană</p>
+<h1 id="artist-name">Drăgoi-Banciu Eugenia</h1>
+<p class="collection-title">Revelația fericirii</p>
 </div>
-
-<section id="gallery-view" class="gallery-view" aria-label="Galeria Revelația fericirii">
-  <div class="gallery-top">
-    <a href="#acasa" class="back-link" id="back-home"><span class="arrow">←</span> Înapoi</a>
-    <h2 class="gallery-title">Revelația fericirii</h2>
-  </div>
-  <div class="gallery-grid" id="gallery-grid"></div>
+<a class="cover" href="#galerie" aria-label="Deschide galeria">
+<img src="revelatia-fericirii-15.jpg" alt="Lucrare din colecția Revelația fericirii">
+</a>
+<div class="intro intro-actions">
+<div class="primary-actions">
+<a class="button" href="#galerie" id="open-gallery">Vezi galeria</a>
+</div>
+<div class="quick-contact">
+<a href="tel:+40745513453">Sună</a>
+<span aria-hidden="true">·</span>
+<a href="mailto:eugenial_30@yahoo.com">E-mail</a>
+<span aria-hidden="true">·</span>
+<a href="contact.vcf" download>Salvează contactul</a>
+</div>
+</div>
 </section>
 
-<section id="viewer" class="viewer" aria-label="Vizualizare lucrare" aria-hidden="true">
-  <header class="viewer-header">
-    <button class="viewer-back" id="viewer-back" type="button"><span class="arrow">←</span> Înapoi la galerie</button>
-    <span class="viewer-number" id="viewer-number">01 / 15</span>
-  </header>
-  <div class="viewer-content"><img id="viewer-image" src="" alt=""></div>
-  <footer class="viewer-footer">
-    <button class="viewer-prev" id="viewer-prev" type="button">← Precedenta</button>
-    <button class="viewer-next" id="viewer-next" type="button">Următoarea →</button>
-  </footer>
+</div>
+<section class="gallery-view gallery-section" id="galerie" aria-label="Galeria Revelația fericirii">
+<div class="gallery-top">
+<h2>Revelația fericirii</h2>
+<a class="back-link" href="#" id="back-home">← Înapoi la copertă</a>
+</div>
+<div class="gallery" id="gallery"></div>
 </section>
-
+<section class="art-view" id="art-view" aria-label="Vizualizare lucrare">
+<div class="viewer-top">
+<button type="button" id="back-gallery">← Înapoi la galerie</button>
+<span class="viewer-count" id="viewer-count">01 / 15</span>
+<button type="button" id="close-viewer">Închide ✕</button>
+</div>
+<div class="viewer-nav">
+<button type="button" id="prev-art" aria-label="Lucrarea precedentă">‹</button>
+<button type="button" id="next-art" aria-label="Lucrarea următoare">›</button>
+</div>
+<img id="viewer-image" src="revelatia-fericirii-01.jpg" alt="Lucrarea 01">
+</section>
+</main>
+<footer class="footer">BAYO DESIGN</footer>
 <script>
-const totalWorks = 15;
-const mainView = document.getElementById("main-view");
-const galleryView = document.getElementById("gallery-view");
-const galleryGrid = document.getElementById("gallery-grid");
-const viewer = document.getElementById("viewer");
-const viewerImage = document.getElementById("viewer-image");
-const viewerNumber = document.getElementById("viewer-number");
-const viewerPrev = document.getElementById("viewer-prev");
-const viewerNext = document.getElementById("viewer-next");
-let currentWork = 1;
-
-function fileName(n) {
-  return "revelatia-fericirii-" + String(n).padStart(2, "0") + ".jpg";
+const gallery=document.getElementById('gallery');
+const viewerImage=document.getElementById('viewer-image');
+const viewerCount=document.getElementById('viewer-count');
+let current=0;
+for(let i=1;i<=15;i++){
+ const n=String(i).padStart(2,'0');
+ const figure=document.createElement('figure'); figure.className='artwork';
+ const button=document.createElement('button'); button.type='button'; button.setAttribute('aria-label','Deschide lucrarea '+n);
+ const img=document.createElement('img'); img.src='revelatia-fericirii-'+n+'.jpg'; img.alt='Lucrarea '+n; img.loading='lazy';
+ button.appendChild(img); button.addEventListener('click',()=>openArtwork(i-1));
+ const caption=document.createElement('figcaption'); caption.textContent=n+' / 15';
+ figure.append(button,caption); gallery.appendChild(figure);
 }
-function showPage(page, updateHistory = true) {
-  mainView.classList.toggle("hidden", page !== "home");
-  galleryView.classList.toggle("active", page === "gallery");
-  viewer.classList.toggle("active", page === "viewer");
-  viewer.setAttribute("aria-hidden", page === "viewer" ? "false" : "true");
-  if (updateHistory) {
-    const hash = page === "home" ? "#acasa" : page === "gallery" ? "#galerie" : "#lucrare-" + String(currentWork).padStart(2, "0");
-    if (location.hash !== hash) history.pushState({page, work: currentWork}, "", hash);
-  }
-  if (page !== "viewer") viewerImage.removeAttribute("src");
-}
-function openWork(n, updateHistory = true) {
-  currentWork = Math.max(1, Math.min(totalWorks, n));
-  viewerImage.src = fileName(currentWork);
-  viewerImage.alt = "Lucrare " + String(currentWork).padStart(2, "0");
-  viewerNumber.textContent = String(currentWork).padStart(2, "0") + " / " + totalWorks;
-  viewerPrev.disabled = currentWork === 1;
-  viewerNext.disabled = currentWork === totalWorks;
-  showPage("viewer", updateHistory);
-}
-for (let n = 1; n <= totalWorks; n++) {
-  const figure = document.createElement("figure");
-  figure.className = "artwork";
-  const button = document.createElement("button");
-  button.type = "button";
-  button.setAttribute("aria-label", "Deschide lucrarea " + String(n).padStart(2, "0"));
-  const img = document.createElement("img");
-  img.src = fileName(n);
-  img.alt = "Lucrare " + String(n).padStart(2, "0");
-  img.loading = "lazy";
-  button.appendChild(img);
-  button.addEventListener("click", () => openWork(n));
-  const caption = document.createElement("figcaption");
-  caption.textContent = String(n).padStart(2, "0") + " / " + totalWorks;
-  figure.append(button, caption);
-  galleryGrid.appendChild(figure);
-}
-function goToGallery(event) {
-  if (event) event.preventDefault();
-  showPage("gallery");
-}
-document.getElementById("open-gallery").addEventListener("click", goToGallery);
-document.getElementById("cover-gallery").addEventListener("click", goToGallery);
-document.getElementById("back-home").addEventListener("click", event => {
-  event.preventDefault();
-  showPage("home");
-});
-document.getElementById("viewer-back").addEventListener("click", () => showPage("gallery"));
-viewerPrev.addEventListener("click", () => { if (currentWork > 1) openWork(currentWork - 1); });
-viewerNext.addEventListener("click", () => { if (currentWork < totalWorks) openWork(currentWork + 1); });
-window.addEventListener("popstate", () => {
-  const hash = location.hash;
-  const workMatch = hash.match(/^#lucrare-(\d{2})$/);
-  if (workMatch) openWork(Number(workMatch[1]), false);
-  else if (hash === "#galerie") showPage("gallery", false);
-  else showPage("home", false);
-});
-window.addEventListener("keydown", event => {
-  if (!viewer.classList.contains("active")) return;
-  if (event.key === "Escape") showPage("gallery");
-  if (event.key === "ArrowLeft" && currentWork > 1) openWork(currentWork - 1);
-  if (event.key === "ArrowRight" && currentWork < totalWorks) openWork(currentWork + 1);
-});
-if (location.hash === "#galerie") showPage("gallery", false);
-else {
-  const initialMatch = location.hash.match(/^#lucrare-(\d{2})$/);
-  if (initialMatch) openWork(Number(initialMatch[1]), false);
-}
+function showGallery(){document.body.classList.add('gallery-open');document.body.classList.remove('art-open');window.scrollTo(0,0)}
+function showHome(){document.body.classList.remove('gallery-open','art-open');window.scrollTo(0,0)}
+function openArtwork(index){current=index;updateArtwork();document.body.classList.remove('gallery-open');document.body.classList.add('art-open')}
+function updateArtwork(){const n=String(current+1).padStart(2,'0');viewerImage.src='revelatia-fericirii-'+n+'.jpg';viewerImage.alt='Lucrarea '+n;viewerCount.textContent=n+' / 15'}
+document.getElementById('open-gallery').addEventListener('click',e=>{e.preventDefault();showGallery()});
+document.querySelector('.cover').addEventListener('click',e=>{e.preventDefault();showGallery()});
+document.getElementById('back-home').addEventListener('click',e=>{e.preventDefault();showHome()});
+document.getElementById('back-gallery').addEventListener('click',showGallery);
+document.getElementById('close-viewer').addEventListener('click',showGallery);
+document.getElementById('prev-art').addEventListener('click',()=>{current=(current+14)%15;updateArtwork()});
+document.getElementById('next-art').addEventListener('click',()=>{current=(current+1)%15;updateArtwork()});
+document.addEventListener('keydown',e=>{if(!document.body.classList.contains('art-open'))return;if(e.key==='ArrowLeft'){current=(current+14)%15;updateArtwork()}if(e.key==='ArrowRight'){current=(current+1)%15;updateArtwork()}if(e.key==='Escape')showGallery()});
 </script>
 </body>
 </html>
