@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f2eb">
+
+<title>Revelația fericirii — Drăgoi-Banciu Eugenia</title>
+<meta name="description" content="Colecția Revelația fericirii, de Drăgoi-Banciu Eugenia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f6f2eb;
+  --ink: #292923;
+  --muted: #777168;
+  --line: #ded7cb;
+  --accent: #8b7157;
+  --white: #fffdf9;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+a { color: inherit; }
+
+.topbar {
+  min-height: 68px;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.top-note {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 42px 5% 0;
+}
+
+.cover {
+  width: 100%;
+  max-height: 560px;
+  overflow: hidden;
+  background: #e8e0d4;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+.intro {
+  padding: 50px 16px 54px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(36px, 5.4vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.collection-title {
+  margin: 0;
+  color: var(--muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.intro-line {
+  width: 46px;
+  height: 1px;
+  margin: 28px auto;
+  background: var(--accent);
+}
+
+.explore {
+  display: inline-block;
+  padding: 15px 25px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gallery-section {
+  padding: 65px 6% 85px;
+  background: var(--white);
+}
+
+.section-heading {
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px 22px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.artwork {
+  margin: 0;
+  min-width: 0;
+}
+
+.artwork a {
+  display: block;
+  overflow: hidden;
+  background: var(--paper);
+  cursor: zoom-in;
+}
+
+.artwork img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.artwork a:hover img { transform: scale(1.025); }
+
+.artwork figcaption {
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.contact {
+  padding: 72px 20px 66px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 0 0 12px;
+  font-size: 38px;
+}
+
+.contact-intro {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 13px 18px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  border-color: var(--accent);
+  background: var(--white);
+}
+
+.footer {
+  padding: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+dialog {
+  width: min(94vw, 1100px);
+  max-width: none;
+  max-height: 94vh;
+  padding: 48px 18px 18px;
+  border: 0;
+  background: #181715;
+  color: white;
+}
+
+dialog::backdrop { background: rgba(20, 19, 17, .92); }
+
+dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  margin: auto;
+  object-fit: contain;
+}
+
+.dialog-caption {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #ddd6cc;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 8px 12px;
+  border: 1px solid #6c6861;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 14px;
+  }
+  .artwork img { height: 300px; }
+  .gallery-section { padding: 52px 5% 65px; }
+}
+
+@media (max-width: 480px) {
+  .topbar { padding: 17px 5%; }
+  .top-note { font-size: 9px; }
+  .hero { padding: 20px 4% 0; }
+  .cover img { max-height: 300px; }
+  .intro { padding: 36px 8px 44px; }
+  h1 { letter-spacing: -.8px; }
+  .collection-title { font-size: 10px; letter-spacing: 2px; }
+  .gallery { gap: 20px 10px; }
+  .artwork img { height: 230px; }
+  .contact h2 { font-size: 32px; }
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    margin: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+<header class="topbar">
+  <div class="wordmark">Drăgoi-Banciu Eugenia</div>
+  <div class="top-note">Artă contemporană</div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="artist-name">
+    <div class="cover">
+      <img src="revelatia-fericirii-15.jpg" alt="Lucrare din colecția Revelația fericirii">
+    </div>
+
+    <div class="intro">
+      <div class="eyebrow">Colecție de artă</div>
+      <h1 id="artist-name">Drăgoi-Banciu Eugenia</h1>
+      <p class="collection-title">Revelația fericirii</p>
+      <div class="intro-line"></div>
+      <a class="explore" href="#colectie">Explorează colecția ↘</a>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="colectie" aria-labelledby="gallery-title">
+    <div class="section-heading">
+      <h2 id="gallery-title">Revelația fericirii</h2>
+      <p>O colecție în 15 lucrări</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="artwork"><a href="revelatia-fericirii-01.jpg"><img src="revelatia-fericirii-01.jpg" alt="Lucrarea 01" loading="lazy"></a><figcaption>LUCRAREA 01</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-02.jpg"><img src="revelatia-fericirii-02.jpg" alt="Lucrarea 02" loading="lazy"></a><figcaption>LUCRAREA 02</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-03.jpg"><img src="revelatia-fericirii-03.jpg" alt="Lucrarea 03" loading="lazy"></a><figcaption>LUCRAREA 03</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-04.jpg"><img src="revelatia-fericirii-04.jpg" alt="Lucrarea 04" loading="lazy"></a><figcaption>LUCRAREA 04</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-05.jpg"><img src="revelatia-fericirii-05.jpg" alt="Lucrarea 05" loading="lazy"></a><figcaption>LUCRAREA 05</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-06.jpg"><img src="revelatia-fericirii-06.jpg" alt="Lucrarea 06" loading="lazy"></a><figcaption>LUCRAREA 06</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-07.jpg"><img src="revelatia-fericirii-07.jpg" alt="Lucrarea 07" loading="lazy"></a><figcaption>LUCRAREA 07</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-08.jpg"><img src="revelatia-fericirii-08.jpg" alt="Lucrarea 08" loading="lazy"></a><figcaption>LUCRAREA 08</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-09.jpg"><img src="revelatia-fericirii-09.jpg" alt="Lucrarea 09" loading="lazy"></a><figcaption>LUCRAREA 09</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-10.jpg"><img src="revelatia-fericirii-10.jpg" alt="Lucrarea 10" loading="lazy"></a><figcaption>LUCRAREA 10</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-11.jpg"><img src="revelatia-fericirii-11.jpg" alt="Lucrarea 11" loading="lazy"></a><figcaption>LUCRAREA 11</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-12.jpg"><img src="revelatia-fericirii-12.jpg" alt="Lucrarea 12" loading="lazy"></a><figcaption>LUCRAREA 12</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-13.jpg"><img src="revelatia-fericirii-13.jpg" alt="Lucrarea 13" loading="lazy"></a><figcaption>LUCRAREA 13</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-14.jpg"><img src="revelatia-fericirii-14.jpg" alt="Lucrarea 14" loading="lazy"></a><figcaption>LUCRAREA 14</figcaption></figure>
+      <figure class="artwork"><a href="revelatia-fericirii-15.jpg"><img src="revelatia-fericirii-15.jpg" alt="Lucrarea 15" loading="lazy"></a><figcaption>LUCRAREA 15</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p class="contact-intro">Drăgoi-Banciu Eugenia</p>
+    <div class="contact-links">
+      <a href="tel:+40745513453">Sună artista</a>
+      <a href="mailto:eugenial_30@yahoo.com">Trimite e-mail</a>
+      <a href="https://www.linkedin.com/in/eugenia-rodica-dr%C4%83goi-banciu-4019393b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">BAYO DESIGN</footer>
+
+<dialog id="lightbox" aria-label="Vizualizare lucrare">
+  <button class="close-viewer" id="close-viewer" type="button">Închide ✕</button>
+  <img id="viewer-image" src="" alt="">
+  <p class="dialog-caption" id="viewer-caption"></p>
+</dialog>
+
+<script>
+const dialog = document.getElementById("lightbox");
+const viewerImage = document.getElementById("viewer-image");
+const viewerCaption = document.getElementById("viewer-caption");
+const closeButton = document.getElementById("close-viewer");
+
+document.querySelectorAll(".artwork a").forEach((link, index) => {
+  link.addEventListener("click", event => {
+    if (typeof dialog.showModal !== "function") return;
+    event.preventDefault();
+    const image = link.querySelector("img");
+    viewerImage.src = link.href;
+    viewerImage.alt = image.alt;
+    viewerCaption.textContent = "Lucrarea " + String(index + 1).padStart(2, "0");
+    dialog.showModal();
+  });
+});
+
+closeButton.addEventListener("click", () => dialog.close());
+
+dialog.addEventListener("click", event => {
+  if (event.target === dialog) dialog.close();
+});
+</script>
+</body>
+</html>
+```
