@@ -134,4 +134,12 @@ document.getElementById('next-art').addEventListener('click',()=>{current=(curre
 document.addEventListener('keydown',e=>{if(!document.body.classList.contains('art-open'))return;if(e.key==='ArrowLeft'){current=(current+14)%15;updateArtwork()}if(e.key==='ArrowRight'){current=(current+1)%15;updateArtwork()}if(e.key==='Escape')showGallery()});
 </script>
 </body>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C59BSB6Z4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C59BSB6Z4M');
+  </script>
 </html>
